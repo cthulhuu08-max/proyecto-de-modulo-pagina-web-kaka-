@@ -1,0 +1,576 @@
+
+
+/* El asterisco selecciona todos los elementos de la página */
+* {
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina los espacios internos predeterminados */
+    box-sizing: border-box; /* Hace que el tamaño incluya el contenido, padding y borde */
+}
+
+/* Configuración de toda la estructura HTML */
+html {
+    scroll-behavior: smooth; /* Hace que el desplazamiento sea suave */
+    scroll-padding-top: 70px; /* Deja un espacio superior al llegar a una sección */
+}
+
+/* Configuración principal del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Establece el tipo de letra */
+    background-color: #d9cbbb; /* Coloca el fondo color beige */
+    color: #1f120a; /* Establece el color general del texto */
+    line-height: 1.5; /* Define el espacio entre líneas de texto */
+}
+
+
+/* ===== NAVBAR: BARRA DE NAVEGACIÓN ===== */
+
+.navbar {
+    position: sticky; /* Mantiene la barra visible al desplazarse */
+    top: 0; /* La coloca en la parte superior */
+    z-index: 10; /* Hace que aparezca por encima de otros elementos */
+    display: flex; /* Activa el sistema flexible */
+    flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: space-between; /* Separa los elementos horizontalmente */
+    gap: 10px; /* Deja espacio entre los elementos */
+    padding: 12px 25px; /* Agrega espacio interno */
+    background-color: #24140c; /* Coloca el fondo café oscuro */
+    border-bottom: 3px solid #b8935a; /* Agrega un borde inferior dorado */
+}
+
+/* Estilo del nombre o marca de la institución */
+.navbar .marca {
+    color: #e2c081; /* Cambia el color del texto */
+    font-size: 18px; /* Define el tamaño de letra */
+    font-weight: bold; /* Coloca el texto en negrita */
+}
+
+/* Configuración de la lista de enlaces */
+.navbar ul {
+    display: flex; /* Coloca los enlaces en una fila */
+    flex-wrap: wrap; /* Permite que los enlaces pasen a otra línea */
+    gap: 5px; /* Separa los enlaces */
+    list-style: none; /* Elimina los puntos de la lista */
+}
+
+/* Diseño de los enlaces de navegación */
+.navbar a {
+    display: block; /* Hace que el enlace ocupe un bloque */
+    padding: 8px 14px; /* Agrega espacio alrededor del enlace */
+    color: #f3e6d3; /* Establece el color de las letras */
+    text-decoration: none; /* Elimina el subrayado */
+    border-radius: 8px; /* Redondea las esquinas */
+}
+
+/* Efecto cuando el cursor pasa sobre un enlace */
+.navbar a:hover {
+    background-color: #5c3a24; /* Cambia el fondo al pasar el cursor */
+    color: #e2c081; /* Cambia el color del texto */
+}
+
+
+/* ===== DISTRIBUCIÓN: SIDEBAR Y CUERPO ===== */
+
+.distribucion {
+    display: flex; /* Coloca el menú lateral y el contenido en fila */
+    align-items: flex-start; /* Alinea ambos elementos desde arriba */
+    gap: 20px; /* Separa el menú lateral del contenido */
+    width: 92%; /* Ocupa el 92% del ancho disponible */
+    max-width: 1200px; /* Evita que el contenido sea demasiado ancho */
+    margin: 25px auto; /* Agrega margen y centra el contenedor */
+}
+
+
+/* ===== SIDEBAR: MENÚ LATERAL ===== */
+
+.side {
+    position: sticky; /* Mantiene el menú visible al desplazarse */
+    top: 80px; /* Define la distancia desde la parte superior */
+    width: 300px; /* Establece el ancho del menú */
+    flex-shrink: 0; /* Evita que el menú se haga más pequeño */
+    padding: 18px; /* Agrega espacio interno */
+    background-color: #cdb89f; /* Coloca un fondo beige */
+    border-radius: 12px; /* Redondea las esquinas */
+}
+
+/* Títulos del menú lateral */
+.side h2 {
+    color: #35200f; /* Cambia el color del título */
+    font-size: 20px; /* Establece el tamaño de letra */
+    margin-bottom: 10px; /* Deja espacio debajo del título */
+}
+
+/* Separa las diferentes secciones del menú */
+.side section {
+    margin-bottom: 22px; /* Agrega espacio inferior */
+}
+
+/* Elimina el margen de la última sección */
+.side section:last-child {
+    margin-bottom: 0;
+}
+
+/* Contenedor del mapa */
+.mapa {
+    overflow: hidden; /* Oculta lo que sobresale del contenedor */
+    border: 2px solid #b8935a; /* Agrega un borde dorado */
+    border-radius: 10px; /* Redondea las esquinas */
+}
+
+/* Configuración del mapa insertado */
+.mapa iframe {
+    display: block; /* Hace que el mapa sea un bloque */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 200px; /* Establece su altura */
+    border: 0; /* Elimina el borde del iframe */
+}
+
+/* Párrafos del menú lateral */
+.side p {
+    margin-top: 8px; /* Deja espacio arriba */
+    font-size: 14px; /* Reduce el tamaño de letra */
+}
+
+/* Elimina los puntos de las listas laterales */
+.side ul {
+    list-style: none;
+}
+
+/* Configuración de los elementos de las listas */
+.side li {
+    margin-bottom: 10px; /* Separa los elementos */
+    font-size: 14px; /* Define el tamaño de letra */
+}
+
+/* Enlaces del menú lateral */
+.side a {
+    color: #7a4a28; /* Establece el color café */
+    font-weight: bold; /* Coloca las letras en negrita */
+}
+
+/* Efecto de los enlaces al pasar el cursor */
+.side a:hover {
+    color: #3f2412; /* Oscurece el color */
+}
+
+
+/* ===== CUERPO PRINCIPAL ===== */
+
+.cuerpo {
+    flex: 1; /* Ocupa todo el espacio restante */
+    min-width: 0; /* Permite que el contenido se reduzca */
+}
+
+/* Diseño de las secciones principales */
+.cuerpo section {
+    padding: 25px; /* Agrega espacio interno */
+    margin-bottom: 20px; /* Separa una sección de otra */
+    background-color: #e8dccd; /* Coloca un fondo beige claro */
+    border-radius: 12px; /* Redondea las esquinas */
+}
+
+/* Títulos principales de las secciones */
+.cuerpo h2 {
+    color: #3f2412; /* Cambia el color del título */
+    font-size: 26px; /* Aumenta el tamaño de letra */
+    margin-bottom: 15px; /* Deja espacio debajo */
+    padding-bottom: 8px; /* Agrega espacio interno inferior */
+    border-bottom: 3px solid #b8935a; /* Agrega una línea dorada */
+}
+
+/* Subtítulos del contenido */
+.cuerpo h3 {
+    color: #6b4226; /* Establece un color café */
+    margin-bottom: 8px; /* Separa el subtítulo del contenido */
+}
+
+
+/* ===== INICIO ===== */
+
+/* Presentación principal de la página */
+.hero {
+    text-align: center; /* Centra el texto */
+    background-color: #24140c !important; /* Coloca el fondo café oscuro */
+    color: #e2c081; /* Cambia el color del texto */
+}
+
+/* Título principal de bienvenida */
+.hero h1 {
+    font-size: 28px; /* Define el tamaño del título */
+    margin-bottom: 6px; /* Deja espacio debajo */
+}
+
+/* Párrafos de la presentación */
+.hero p {
+    margin-bottom: 15px; /* Separa los párrafos de otros elementos */
+}
+
+/* Sección de bienvenida */
+.bienvenida {
+    background-color: #d6c2a8 !important; /* Coloca un fondo beige */
+}
+
+/* Párrafos de bienvenida */
+.bienvenida p {
+    margin-bottom: 10px; /* Agrega separación inferior */
+}
+
+
+/* ===== TARJETAS: CARRERAS Y ACTIVIDADES ===== */
+
+/* Contenedor que organiza las tarjetas */
+.tarjetas {
+    display: grid; /* Activa el sistema de cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    /* Crea columnas automáticas con un mínimo de 260px */
+    gap: 18px; /* Separa las tarjetas */
+}
+
+/* Diseño individual de cada tarjeta */
+.tarjeta {
+    overflow: hidden; /* Oculta el contenido que sobresale */
+    background-color: #f1e6d6; /* Coloca un fondo claro */
+    border: 1px solid #b79f80; /* Agrega un borde */
+    border-radius: 12px; /* Redondea las esquinas */
+}
+
+/* Imágenes que aparecen dentro de las tarjetas */
+.tarjeta img {
+    display: block; /* Elimina espacios extra de imagen */
+    width: 100%; /* Ocupa todo el ancho */
+    height: 170px; /* Establece la altura */
+    object-fit: cover; /* Recorta la imagen para llenar el espacio */
+    background: #35200f; /* Fondo que aparece detrás de la imagen */
+}
+
+/* Contenedor del texto de las tarjetas */
+.tarjeta .texto {
+    padding: 16px; /* Agrega espacio interno */
+}
+
+/* Párrafos de las tarjetas */
+.tarjeta p {
+    font-size: 14px; /* Reduce el tamaño de letra */
+}
+
+/* Listas dentro de las tarjetas */
+.tarjeta ul {
+    margin: 8px 0 0 20px; /* Establece los márgenes */
+    font-size: 14px; /* Define el tamaño de letra */
+}
+
+/* Etiqueta que muestra la duración de una carrera */
+.duracion {
+    display: inline-block; /* Permite aplicar dimensiones y mantenerla en línea */
+    margin-bottom: 8px; /* Deja espacio debajo */
+    padding: 4px 12px; /* Agrega espacio interno */
+    background-color: #5c3a24; /* Coloca un fondo café */
+    color: #e2c081; /* Cambia el color del texto */
+    border-radius: 20px; /* Redondea bastante las esquinas */
+    font-size: 13px; /* Establece el tamaño de letra */
+    font-weight: bold; /* Coloca el texto en negrita */
+}
+
+
+/* ===== MISIÓN Y VISIÓN ===== */
+
+/* Organiza misión y visión en columnas */
+.mv {
+    display: grid; /* Activa la cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    /* Crea columnas automáticas de mínimo 260px */
+    gap: 18px; /* Separa las columnas */
+}
+
+/* Diseño de cada cuadro de misión y visión */
+.mv div {
+    padding: 18px; /* Agrega espacio interno */
+    background-color: #f1e6d6; /* Coloca un fondo claro */
+    border: 1px solid #b79f80; /* Agrega un borde */
+    border-radius: 12px; /* Redondea las esquinas */
+}
+
+
+/* ===== FOOTER: PIE DE PÁGINA ===== */
+
+footer {
+    padding: 20px; /* Agrega espacio interno */
+    background-color: #24140c; /* Coloca un fondo café oscuro */
+    color: #f3e6d3; /* Cambia el color del texto */
+    text-align: center; /* Centra el contenido */
+}
+
+/* Párrafos del pie de página */
+footer p {
+    margin-bottom: 6px; /* Deja espacio debajo */
+}
+
+/* Enlaces del pie de página */
+footer a {
+    color: #e2c081; /* Establece un color dorado */
+}
+
+
+/* ===== DISEÑO PARA CELULARES ===== */
+
+/* Se activa cuando la pantalla tiene máximo 800px de ancho */
+@media (max-width: 800px) {
+
+    /* Cambia la distribución a vertical */
+    .distribucion {
+        flex-direction: column;
+    }
+
+    /* El menú lateral ocupa todo el ancho */
+    .side {
+        position: static; /* Elimina la posición fija al desplazarse */
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    /* Centra los elementos de la barra de navegación */
+    .navbar {
+        justify-content: center;
+    }
+}
+
+
+/* ===== CARRUSEL PRINCIPAL: 5 IMÁGENES ===== */
+
+/* Contenedor principal del carrusel */
+.carrusel {
+    position: relative; /* Permite posicionar elementos dentro de él */
+    overflow: hidden; /* Oculta las imágenes que quedan fuera */
+    border-radius: 10px; /* Redondea las esquinas */
+    background: #35200f; /* Coloca un fondo café */
+}
+
+/* Oculta los botones de selección del carrusel */
+.carrusel input {
+    display: none;
+}
+ 
+/* Pista que contiene todas las imágenes */
+.pista {
+    display: flex; /* Coloca las imágenes en una fila */
+    width: 500%; /* Ocupa cinco veces el ancho del carrusel */
+    transition: transform 0.4s ease; /* Suaviza el movimiento */
+}
+
+/* Configuración individual de cada diapositiva */
+.slide {
+    flex: 0 0 20%; /* Cada diapositiva ocupa el 20% de la pista */
+    width: 20%; /* Establece su ancho */
+}
+
+/* Imágenes del carrusel */
+.slide img {
+    display: block; /* Elimina espacios extra */
+    width: 100%; /* Ocupa todo el ancho de la diapositiva */
+    height: 360px; /* Establece la altura */
+    object-fit: contain; /* Muestra la imagen completa sin recortarla */
+    background: #35200f; /* Fondo detrás de la imagen */
+    color: #e2c081; /* Color de texto alternativo */
+    font-size: 14px; /* Tamaño del texto alternativo */
+}
+
+/* Mueve la pista para mostrar la segunda imagen */
+#c2:checked ~ .pista {
+    transform: translateX(-20%);
+}
+
+/* Mueve la pista para mostrar la tercera imagen */
+#c3:checked ~ .pista {
+    transform: translateX(-40%);
+}
+
+/* Mueve la pista para mostrar la cuarta imagen */
+#c4:checked ~ .pista {
+    transform: translateX(-60%);
+}
+
+/* Mueve la pista para mostrar la quinta imagen */
+#c5:checked ~ .pista {
+    transform: translateX(-80%);
+}
+
+/* Contenedor de los puntos de navegación */
+.puntos {
+    position: absolute; /* Permite colocarlos encima del carrusel */
+    bottom: 12px; /* Los coloca cerca de la parte inferior */
+    left: 50%; /* Los desplaza al centro horizontal */
+    transform: translateX(-50%); /* Centra exactamente el contenedor */
+    display: flex; /* Coloca los puntos en fila */
+    gap: 10px; /* Separa los puntos */
+}
+
+/* Diseño de cada punto del carrusel */
+.puntos label {
+    width: 12px; /* Ancho del punto */
+    height: 12px; /* Alto del punto */
+    border: 1px solid #b8935a; /* Borde dorado */
+    border-radius: 50%; /* Convierte el elemento en círculo */
+    background: #5c3a24; /* Color del punto */
+    cursor: pointer; /* Cambia el cursor a una mano */
+}
+
+/* Cambia el color del punto que corresponde a la imagen seleccionada */
+#c1:checked ~ .puntos label:nth-child(1),
+#c2:checked ~ .puntos label:nth-child(2),
+#c3:checked ~ .puntos label:nth-child(3),
+#c4:checked ~ .puntos label:nth-child(4),
+#c5:checked ~ .puntos label:nth-child(5) {
+    background: #e2c081; /* Pinta el punto de dorado */
+    transform: scale(1.2); /* Aumenta un poco su tamaño */
+}
+
+
+/* ===== OFERTA ACADÉMICA: DOS TARJETAS POR FILA ===== */
+
+/* Organiza las tarjetas de oferta académica en dos columnas */
+#oferta .tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start; /* Alinea las tarjetas desde arriba */
+}
+
+/* Separa el contenido desplegable de las tarjetas */
+.tarjeta details {
+    margin-top: 4px;
+}
+
+/* Diseño del botón o texto "Ver más" */
+.tarjeta summary {
+    display: inline-block; /* Permite darle espacio interno */
+    padding: 6px 16px; /* Agrega espacio alrededor */
+    background-color: #5c3a24; /* Fondo café */
+    color: #f3e6d3; /* Texto claro */
+    border-radius: 8px; /* Redondea las esquinas */
+    font-size: 14px; /* Tamaño de letra */
+    cursor: pointer; /* Muestra una mano al pasar el cursor */
+    list-style: none; /* Elimina el marcador predeterminado */
+}
+
+/* Oculta el marcador predeterminado de summary en Chrome y Safari */
+.tarjeta summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Efecto al pasar el cursor por "Ver más" */
+.tarjeta summary:hover {
+    background-color: #24140c;
+    color: #e2c081;
+}
+
+/* Agrega separación cuando el contenido está abierto */
+.tarjeta details[open] summary {
+    margin-bottom: 10px;
+}
+
+/* Agrega la palabra cerrar cuando se abre el contenido */
+.tarjeta details[open] summary::after {
+    content: " (cerrar)";
+}
+
+
+/* ===== AJUSTES DEL CARRUSEL Y OFERTA EN CELULARES ===== */
+
+@media (max-width: 800px) {
+
+    /* En celulares las tarjetas de oferta aparecen en una columna */
+    #oferta .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reduce la altura de las imágenes del carrusel */
+    .slide img {
+        height: 220px;
+    }
+}
+
+
+/* ===== ACTIVIDADES: TRES TARJETAS POR FILA ===== */
+
+/* Organiza las actividades en tres columnas */
+#actividades .tarjetas {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Cuando la pantalla mide máximo 1000px, utiliza dos columnas */
+@media (max-width: 1000px) {
+    #actividades .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Cuando la pantalla mide máximo 800px, utiliza una columna */
+@media (max-width: 800px) {
+    #actividades .tarjetas {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ===== ESTILO FINAL DE "VER MÁS" ===== */
+
+/* Modifica el diseño anterior de summary para dejarlo como texto */
+.tarjeta summary {
+    padding: 0; /* Elimina el espacio interno */
+    background: none; /* Elimina el fondo */
+    color: #5c3a24; /* Coloca las letras color café */
+    font-weight: bold; /* Coloca el texto en negrita */
+    text-decoration: underline; /* Subraya el texto */
+    border-radius: 0; /* Elimina las esquinas redondeadas */
+}
+
+/* Efecto cuando el cursor pasa por "Ver más" */
+.tarjeta summary:hover {
+    background: none; /* Mantiene el fondo transparente */
+    color: #24140c; /* Oscurece las letras */
+}
+
+
+/* ===== ANIMACIÓN DE LAS TARJETAS ===== */
+
+/* Establece una transición suave para las tarjetas */
+.tarjeta {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Efecto que ocurre cuando el cursor pasa sobre una tarjeta */
+.tarjeta:hover {
+    transform: translateY(-6px); /* Eleva la tarjeta 6px */
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3); /* Agrega una sombra */
+}
+
+/* Establece una transición suave para las imágenes */
+.tarjeta img {
+    transition: transform 0.35s ease;
+}
+
+/* Agranda ligeramente la imagen al pasar el cursor */
+.tarjeta:hover img {
+    transform: scale(1.05);
+}
+
+/* Mantiene oculto el contenido que sobresale de la tarjeta */
+.tarjeta {
+    overflow: hidden;
+}
+
+
+/* ===== ACCESIBILIDAD: REDUCIR MOVIMIENTOS ===== */
+
+/* Detecta si el usuario prefiere menos animaciones */
+@media (prefers-reduced-motion: reduce) {
+
+    /* Elimina las transiciones de tarjetas e imágenes */
+    .tarjeta,
+    .tarjeta img {
+        transition: none;
+    }
+
+    /* Desactiva los movimientos y aumentos de tamaño */
+    .tarjeta:hover,
+    .tarjeta:hover img {
+        transform: none;
+    }
+}
